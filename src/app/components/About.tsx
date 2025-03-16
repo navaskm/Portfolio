@@ -7,6 +7,12 @@ const About = () => {
 
   const { resolvedTheme } = useTheme() as { resolvedTheme: 'dark' | 'light' };
 
+  const handleProject = (title:string)=>{
+    if(title === 'Projects'){
+      window.open("https://e-commerce-app-henna-nu.vercel.app/","_blank")
+    }
+  }
+
   return (
     <motion.div 
       initial={{opacity:0}}
@@ -73,6 +79,7 @@ const About = () => {
                     ${resolvedTheme === 'dark'?'hover:bg-[#0a2c23]':'hover:bg-white'}`}
                   onMouseEnter={(e) => (e.currentTarget.style.boxShadow = "4px 4px 12px rgba(7, 172, 108, 0.774)")}
                   onMouseLeave={(e) => (e.currentTarget.style.boxShadow = "none")}
+                  onClick={()=>handleProject(title)}
                 >
 
                   <Image src={resolvedTheme === 'dark'?iconDark:icon} alt={title} className="w-7 mt-3"/>

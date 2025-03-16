@@ -100,5 +100,5 @@ const features = [
 
 // Technologies Used
 const technologies = [
-  "HTML", "CSS", "JavaScript", "React.js", "Next.js", "Framer Motion", "Tailwind CSS", "SCSS", "Bootstrap"
+  "HTML", "CSS", "JavaScript", "React.js", "Next.js", "TypeScript", "TanStack Query", "Framer Motion", "Tailwind CSS", "SCSS", "Bootstrap", "jQuery"
 ];

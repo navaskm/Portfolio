@@ -27,7 +27,7 @@ const Footer = () => {
         <p>© 2025 Navas KM. All rights reserved.</p>
         <ul className="flex items-center gap-10 justify-center mt-4 sm:mt-0">
           <li><a target="_blank" href="https://github.com/navaskm">GitHub</a></li>
-          <li><a target="_blank" href="linkedin.com/in/navas-km-981678347">LinkedIn</a></li>
+          <li><a target="_blank" href="https://linkedin.com/in/navas-km-981678347">LinkedIn</a></li>
           <li><a target="_blank" href="https://instagram.com/_navas_k_m">Instagram</a></li>
         </ul>
       </div>

@@ -90,10 +90,15 @@ export const assets = {
 
 export const workData = [
     {
-        title: 'Frontend project',
+        title: 'Frontend Project',
+        description: 'E-commerce App',
+        bgImage: '/work-3.png',
+        link:'e-commerce-app-henna-nu.vercel.app'
+    },{
+        title: 'Portfolio Project',
         description: 'Web Design',
         bgImage: '/work-1.png',
-        link:'e-commerce-app-henna-nu.vercel.app'
+        link:'anshin-ten.vercel.app'
     }
 ]
 

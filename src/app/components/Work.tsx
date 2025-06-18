@@ -7,8 +7,8 @@ const Work = () => {
 
   const { resolvedTheme } = useTheme() as {resolvedTheme : 'dark'|'light'};
 
-  const handleProject = () => {
-    window.open('https://e-commerce-app-henna-nu.vercel.app', '_blank');
+  const handleProject = (Link:string) => {
+    window.open(Link, '_blank');
   };
   
 
@@ -53,7 +53,7 @@ const Work = () => {
               key={index} 
               style={{backgroundImage:`url(${project.bgImage})`}}
               className='aspect-square bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group'
-              onClick={handleProject}
+              onClick={()=>handleProject(project.link)}
             >
 
               <div className='bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7'>

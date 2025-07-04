@@ -72,33 +72,27 @@ export const assets = {
     right_arrow_bold_dark
 };
 
-// {
-//     title: 'Geo based app',
-//     description: 'Mobile App',
-//     bgImage: '/work-2.png',
-// },
-// {
-//     title: 'Photography site',
-//     description: 'Web Design',
-//     bgImage: '/work-3.png',
-// },
-// {
-//     title: 'UI/UX designing',
-//     description: 'UI/UX Design',
-//     bgImage: '/work-4.png',
-// },
-
 export const workData = [
     {
         title: 'Frontend Project',
-        description: 'E-commerce App',
+        description: 'E-commerce App with Next.js 15 and Clerk Auth',
         bgImage: '/work-3.png',
         link:'https://e-commerce-app-henna-nu.vercel.app'
     },{
+        title: 'Employee Management System',
+        description: 'Role-based task management app using Next.js and Redux',
+        bgImage: '/work-4.png',
+        link:'https://employee-management-system-three-theta.vercel.app/'
+    },{
         title: 'Portfolio Project',
-        description: 'Web Design',
+        description: 'Web Design Portfolio for Graphic Designer',
         bgImage: '/work-1.png',
         link:'https://anshin-ten.vercel.app'
+    },{
+        title: 'Ruby Cube Solver',
+        description: 'Rubik’s Cube solver built with Next.js and JavaScript logic',
+        bgImage: '/work-2.png',
+        link:'https://rubyk-s-cube-git-main-navaskms-projects.vercel.app/'
     }
 ]
 

@@ -8,8 +8,8 @@ const About = () => {
   const { resolvedTheme } = useTheme() as { resolvedTheme: 'dark' | 'light' };
 
   const handleProject = (title:string)=>{
-    if(title === 'Projects'){
-      window.open("https://e-commerce-app-henna-nu.vercel.app/","_blank")
+    if(title === 'GitHub'){
+      window.open("https://github.com/navaskm","_blank")
     }
   }
 

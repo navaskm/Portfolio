@@ -103,9 +103,9 @@ export const serviceData = [
 ];
 
 export const infoList = [
-    { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Languages', description: 'HTML, CSS, JavaScript React Js, Next Js' },
+    { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Languages', description: 'HTML, CSS, JavaScript React Js, Next Js, Redux toolkit' },
     { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Education', description: '+2 in Computer Commerce' },
-    { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Projects', description: 'Developed a full-fledged e-commerce app with Next.js' }
+    { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'GitHub', description: 'Showcasing my coding work, personal projects, and development journey on GitHub.' }
 ];
 
 export const advancedLanguage = [

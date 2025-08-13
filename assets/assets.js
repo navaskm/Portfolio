@@ -99,7 +99,7 @@ export const workData = [
 export const serviceData = [
     { icon: assets.web_icon, title: 'Web Development', description: 'Building and maintaining websites and web applications...', link: '/services/WebDevelopment' },
     { icon: assets.ui_icon, title: 'Frontend UI Development', description: 'Transforming designs into responsive and interactive user interfaces...', link: '/services/UiDevelopment' },
-    { icon: assets.graphics_icon, title: 'Graphics Design', description: 'Creative design solutions to enhance visual communication...', link: '/services/GraphicDesign' }
+    { icon: assets.graphics_icon, title: 'SEO Optimization', description: 'Improving website visibility and ranking on search engines through best SEO practices...', link: '/services/SeoOptimization' }
 ];
 
 export const infoList = [

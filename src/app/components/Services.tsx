@@ -9,21 +9,7 @@ const Services = () => {
   const { resolvedTheme } = useTheme() as {resolvedTheme : 'light' | 'dark'};
   const router = useRouter();
 
-  const handleSkills = (index:number)=>{
-
-    if(index === 0){
-      router.push("/services/WebDevelopment");
-    }
-
-    if(index === 1){
-      router.push("/services/UiDevelopment");
-    }
-
-    if(index === 2){
-      router.push("/services/GraphicDesign");
-    }
-
-  }
+  const handleSkills = (link:string)=> router.push(link);
 
   return (
     <motion.div 
@@ -65,17 +51,20 @@ const Services = () => {
               className={`border border-gray-400 rounded-lg px-8 py-12 hover:-translate-y-1 duration-500 cursor-pointer ${resolvedTheme === 'dark'?'hover:bg-[#0a2c23]':'hover:bg-white'}`}
               onMouseEnter={(e) => (e.currentTarget.style.boxShadow = "4px 4px 12px rgba(7, 172, 108, 0.774)")}
               onMouseLeave={(e) => (e.currentTarget.style.boxShadow = "none")}
-              onClick={()=>handleSkills(index)}
+              onClick={()=>handleSkills(service.link)}
               key={index}
             >
 
               <Image src={service.icon} alt='' className='w-10'/>
-              <h3 className={`text-lg my-4 text-gray-700 ${resolvedTheme === 'dark'?'text-white':''}`}>{service.title}</h3>
-              <p className={`text-sm text-gray-600 leading-5 ${resolvedTheme === 'dark'?'text-white/80':''}`}>{service.description}</p>
-              <a href={service.link} className='flex items-center gap-2 text-sm mt-5 cursor-pointer hover:text-blue-700'>
-                Read more 
-                <Image src={assets.right_arrow} alt='' className='w-4'/>
-              </a>
+              <h3 className={`text-lg my-4 text-gray-700 ${resolvedTheme === 'dark'?'text-white':''}`}>
+                {service.title}
+              </h3>
+              <p className={`text-sm text-gray-600 leading-5 ${resolvedTheme === 'dark'?'text-white/80':''}`}>
+                {service.description}
+              </p>
+              <p className="flex items-center gap-2 text-sm mt-5 cursor-pointer hover:text-blue-700">
+                Read more <Image src={assets.right_arrow} alt='' className='w-4'/>
+              </p>
 
             </motion.div>
           ))
@@ -86,4 +75,4 @@ const Services = () => {
   )
 }
 
-export default Services
+export default Services;

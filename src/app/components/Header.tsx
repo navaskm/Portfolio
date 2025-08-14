@@ -15,6 +15,7 @@ const Header = () => {
         initial={{y:-20, opacity:0}}
         whileInView={{y:0,opacity:1}}
         transition={{duration: 0.6, delay:0.3}}
+        className="md:mt-15"
       >
         <Image 
           src={assets.profile_img} 

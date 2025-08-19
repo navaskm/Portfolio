@@ -35,7 +35,7 @@ const Footer = () => {
           </li>
 
           <li>
-            <a target="_blank" href="https://linkedin.com/in/navas-km-981678347">
+            <a target="_blank" href="https://www.linkedin.com/in/navaskm-developer/">
               <img src="/linkedin.png" alt="LinkedIn" className="w-7 rounded" />
             </a>
           </li>

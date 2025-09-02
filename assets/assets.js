@@ -89,10 +89,10 @@ export const workData = [
         bgImage: '/work-1.png',
         link:'https://anshin-ten.vercel.app'
     },{
-        title: 'Ruby Cube Solver',
-        description: 'Rubik’s Cube solver built with Next.js and JavaScript logic',
+        title: 'Bollinger Bands Indicator',
+        description: 'Bollinger Bands chart built with Next.js and KLineCharts',
         bgImage: '/work-2.png',
-        link:'https://rubyk-s-cube-git-main-navaskms-projects.vercel.app/'
+        link:'https://bollinger-bands-sable.vercel.app/'
     }
 ]
 

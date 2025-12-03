@@ -97,7 +97,7 @@ export const workData = [
         title: 'Smart Expense Tracker',
         description: 'Created expense tracking app using Cursor AI.',
         bgImage: '/work-2.png',
-        link:'https://github.com/navaskm/expence-traker'
+        link:'https://navaskm.github.io/expence-traker/'
     }
 ]
 

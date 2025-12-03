@@ -93,6 +93,11 @@ export const workData = [
         description: 'Bollinger Bands chart built with Next.js and KLineCharts',
         bgImage: '/work-2.png',
         link:'https://bollinger-bands-sable.vercel.app/'
+    },{
+        title: 'Smart Expense Tracker',
+        description: 'Created expense tracking app using Cursor AI.',
+        bgImage: '/work-2.png',
+        link:'https://github.com/navaskm/expence-traker'
     }
 ]
 

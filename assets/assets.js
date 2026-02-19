@@ -66,12 +66,12 @@ export const assets = {
     mobile_icon,
     ui_icon,
     graphics_icon,
-    right_arrow,
+    
     send_icon,
     right_arrow_bold,
     right_arrow_bold_dark
 };
-
+// right_arrow,
 export const workData = [
     {
         title: 'Frontend Project',
@@ -100,12 +100,6 @@ export const workData = [
         link:'https://navaskm.github.io/expence-traker/'
     }
 ]
-
-export const serviceData = [
-    { icon: assets.web_icon, title: 'Web Development', description: 'Building and maintaining websites and web applications...', link: '/services/WebDevelopment' },
-    { icon: assets.ui_icon, title: 'Frontend UI Development', description: 'Transforming designs into responsive and interactive user interfaces...', link: '/services/UiDevelopment' },
-    { icon: assets.graphics_icon, title: 'SEO Optimization', description: 'Improving website visibility and ranking on search engines through best SEO practices...', link: '/services/SeoOptimization' }
-];
 
 export const infoList = [
     { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Languages', description: 'HTML, CSS, JavaScript React Js, Next Js, Redux toolkit' },

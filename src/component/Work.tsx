@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { motion } from 'motion/react';
-import { assets, workData } from '../../../assets/assets';
+import { assets, workData } from '../../assets/assets';
 
 const Work = () => {
 

@@ -1,7 +1,5 @@
 import Image from "next/image";
-import { assets } from '../../../assets/assets';
-import DarkLogo from "./inside/DarkLogo";
-import LightLogo from "./inside/LightLogo";
+import { assets } from '../../assets/assets';
 
 const Footer = () => {
 
@@ -9,7 +7,9 @@ const Footer = () => {
     <div className="mt-20">
 
       <div className="text-center">
-          <LightLogo/>
+          <h1 className="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600 hover:scale-105 transition-transform duration-300">
+              Navas <span className="text-black ">KM</span>
+            </h1>
 
         <div className="w-max flex items-center gap-2 mx-auto">
           <Image src={ assets.mail_icon_dark} alt='' className="w-6"/>

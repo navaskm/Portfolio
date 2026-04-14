@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { motion } from "motion/react";
-import { assets, infoList, advancedLanguage } from '../../../assets/assets';
+import { assets, infoList, advancedLanguage } from "../../assets/assets";
 
 const About = () => {
 

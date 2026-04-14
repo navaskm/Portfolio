@@ -1,11 +1,11 @@
 "use client";
 
-import NavBar from '@/app/components/NavBar';
-import Header from '@/app/components/Header';
-import About from '@/app/components/About';
-import Work from '@/app/components/Work';
-import Contact from '@/app/components/Contact';
-import Footer from '@/app/components/Footer';
+import NavBar from '@/component/NavBar';
+import Header from '@/component/Header';
+import About from '@/component/About';
+import Work from '@/component/Work';
+import Contact from '@/component/Contact';
+import Footer from '@/component/Footer';
 
 export default function Home() {
 
@@ -19,4 +19,4 @@ export default function Home() {
       <Footer/>
     </>
   );
-}
+};

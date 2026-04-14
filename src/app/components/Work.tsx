@@ -1,11 +1,8 @@
 import Image from 'next/image';
-import { useTheme } from 'next-themes';
 import { motion } from 'motion/react';
 import { assets, workData } from '../../../assets/assets';
 
 const Work = () => {
-
-  const { resolvedTheme } = useTheme() as {resolvedTheme : 'dark'|'light'};
 
   const handleProject = (Link:string) => {
     window.open(Link, '_blank');
@@ -44,7 +41,7 @@ const Work = () => {
       initial={{opacity:0}}
       whileInView={{opacity:1}}
       transition={{duration:0.6,delay:0.9}}
-      className={`grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] my-10 gap-5 ${resolvedTheme === 'dark'?'text-black':''}`}>
+      className={`grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] my-10 gap-5 `}>
         {
           workData.map((project,index)=>(
             <motion.div 
@@ -78,13 +75,13 @@ const Work = () => {
         transition={{duration:0.5,delay:1.1}}
         href="https://github.com/navaskm" 
         target='_blank'
-        className={`w-max flex items-center justify-center gap-2 text-gray-700 border-[0.5px] border-gray-700 rounded-full py-3 px-10 mx-auto my-20 duration-500 ${resolvedTheme==='dark'?'text-white border-white hover:bg-[#0a2c23]':'hover:bg-white'}`}
+        className={`w-max flex items-center justify-center gap-2 text-gray-700 border-[0.5px] border-gray-700 rounded-full py-3 px-10 mx-auto my-20 duration-500 `}
         onMouseEnter={(e) => (e.currentTarget.style.boxShadow = "4px 4px 12px rgba(7, 172, 108, 0.774)")}
         onMouseLeave={(e) => (e.currentTarget.style.boxShadow = "none")}
       >
         Show more 
         <Image 
-          src={resolvedTheme === 'dark'?assets.right_arrow_bold_dark:assets.right_arrow_bold}
+          src={assets.right_arrow_bold_dark}
           alt=''
           className='w-4'
         />

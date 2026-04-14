@@ -1,16 +1,10 @@
 import Image from "next/image";
 import { useRef} from "react";
-import ThemeSwitch from "../ThemeSwitch";
 import { assets } from "../../../../assets/assets";
 import DarkLogo from "./DarkLogo";
 import LightLogo from "./LightLogo";
 
-type hello = {
-  isScroll : boolean;
-  resolvedTheme: 'dark' | 'light' | string;
-}
-
-const InsideNavbar = ({isScroll,resolvedTheme}:hello) => {
+const InsideNavbar = () => {
 
   const sideMenuRef = useRef<HTMLUListElement>(null);
 
@@ -26,19 +20,15 @@ const InsideNavbar = ({isScroll,resolvedTheme}:hello) => {
   }
 
   return (
-    <nav className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 
-      ${isScroll  && resolvedTheme === 'light'? "bg-white/50 backdrop-blur-lg shadow-sm":''} ${resolvedTheme === 'dark' ? 'bg-black':''}`} suppressHydrationWarning>
+    <nav className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50`}>
 
       {/* site logo */}
       <a href="#top">
-        {
-          resolvedTheme === 'dark'?
-          <DarkLogo/>:<LightLogo/>
-        }
+          <DarkLogo/>
       </a>
 
       {/* links */}
-      <ul className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 ${resolvedTheme === 'dark' && 'border border-white/50 bg-dark shadow-sm bg-opacity-50'} ${!isScroll && resolvedTheme === 'light' ? 'bg-white shadow-sm bg-opacity-50':'*:'}`}>
+      <ul className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3`}>
 
         <li><a href="#top" className="font-Ovo">Home</a></li>
         <li><a href="#about" className="font-Ovo">About me</a></li>
@@ -52,15 +42,11 @@ const InsideNavbar = ({isScroll,resolvedTheme}:hello) => {
 
         {/* theme toggle button*/}
 
-        <button>
-          <ThemeSwitch/>
-        </button>
-
         {/* contact button */}
-        <a href="#contact" className={`hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4 ${resolvedTheme==='dark'?'border-white':''}`}>
+        <a href="#contact" className={`hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4 `}>
           Contact 
           <Image 
-            src={resolvedTheme === 'dark'? assets.arrow_icon_dark:assets.arrow_icon}
+            src={assets.arrow_icon_dark}
             alt=''
             className="w-3"
           />
@@ -72,7 +58,7 @@ const InsideNavbar = ({isScroll,resolvedTheme}:hello) => {
           onClick={openMenu}
         >
           <Image 
-            src={resolvedTheme === 'dark'? assets.menu_white:assets.menu_black} 
+            src={assets.menu_white} 
             alt=''
             className="w-6"
           />
@@ -82,15 +68,14 @@ const InsideNavbar = ({isScroll,resolvedTheme}:hello) => {
 
 
       {/* ------------ mobile menu ----------- */}
-      <ul ref={sideMenuRef} className={`flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen transition duration-500 
-        ${resolvedTheme==='dark'?'bg-black text-white':'bg-rose-50'}`}>
+      <ul ref={sideMenuRef} className={`flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen transition duration-500`}>
 
         <div 
           onClick={closeMenu}
           className="absolute right-6 top-6"
         >
           <Image 
-            src={resolvedTheme === 'dark'? assets.close_white:assets.close_black}
+            src={assets.close_white}
             alt=''
             className="w-5 cursor-pointer"
           />

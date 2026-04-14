@@ -1,11 +1,8 @@
 import Image from "next/image";
-import { useTheme } from "next-themes";
 import { motion } from "motion/react";
 import { assets } from '../../../assets/assets';
 
 const Header = () => {
-
-  const { resolvedTheme } = useTheme() as { resolvedTheme: 'dark' | 'light' };
 
   return (
     <div className="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4">
@@ -59,7 +56,7 @@ const Header = () => {
           whileInView={{y:0,opacity:1}}
           transition={{duration: 0.6, delay:1}}
           href="#contact" 
-          className={`px-10 py-3 border border-white rounded-full bg-black text-white flex items-center gap-2 ${resolvedTheme === 'dark'?'bg-transparent':''}`}
+          className={`px-10 py-3 border border-white rounded-full bg-black text-white flex items-center gap-2 `}
         >
           contact me 
           <Image 
@@ -75,8 +72,7 @@ const Header = () => {
           transition={{duration: 0.6, delay:1.2}}
           href="/Navas-KM-Frontend-Developer-Resume.pdf"
           download
-          className={`px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 
-            ${resolvedTheme === 'dark'?'text-black bg-white':''}`}
+          className={`px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2`}
         >
           my resume  
           <Image 

@@ -1,13 +1,11 @@
 import { useState } from "react";
 import Image from "next/image";
-import { useTheme } from "next-themes";
 import { motion } from "motion/react";
 import { assets } from '../../../assets/assets';
 
 const Contact = () => {
 
   const [result, setResult] = useState("");
-  const { resolvedTheme } = useTheme() as {resolvedTheme:'dark'|'light'};
 
   const onSubmit = async (event:React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -39,13 +37,12 @@ const Contact = () => {
       transition={{duration:1}}
       id="contact" 
       className="w-full px-[12%] py-10 scroll-mt-20"
-      style={resolvedTheme === 'light' ?{ 
+      style={{ 
         backgroundImage: "url('/footer-bg-color.png')",
         backgroundSize: "90% auto",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat"
-      }:{}}
-      suppressHydrationWarning
+      }}
     >
 
       <motion.h4
@@ -85,7 +82,7 @@ const Contact = () => {
             placeholder="Enter your name" 
             name="name"
             required
-            className={`flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-mb ${resolvedTheme === 'dark'?'bg-black border-white/90':'bg-white'}`}
+            className={`flex-1 p-3 outline-none border-[0.5px] rounded-mb bg-black border-white/90 `}
           />
 
           <motion.input 
@@ -96,7 +93,8 @@ const Contact = () => {
             placeholder="Enter your email" 
             name="email"
             required
-            className={`flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-mb ${resolvedTheme === 'dark'?'bg-black border-white/90':'bg-white'}`}
+            className={`flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-mb 
+              bg-black `}
           />
 
         </div>
@@ -109,14 +107,14 @@ const Contact = () => {
           placeholder="Enter your message" 
           required
           name="message"
-          className={`w-full p-4 outline-none border-[0.5px] border-gray-400 rounded-md mb-6 ${resolvedTheme === 'dark'?'bg-black border-white/90':'bg-white'}`}
+          className={`w-full p-4 outline-none border-[0.5px] border-gray-400 rounded-md mb-6`}
         ></motion.textarea>
 
         <motion.button 
           whileHover={{scale:1.05}}
           transition={{duration:0.3}}
           type="submit"
-          className={`py-3 px-8 w-max flex items-center justify-between gap-2 text-white rounded-full mx-auto duration-500 cursor-pointer ${resolvedTheme === 'dark'?'bg-gray-900 border-[0.5px] border-white hover:bg-white/10':'bg-black hover:bg-gray-800'}`}
+          className={`py-3 px-8 w-max flex items-center justify-between gap-2 text-white rounded-full mx-auto duration-500 cursor-pointer`}
         >
           Submit now 
           <Image src={assets.right_arrow_white} alt='' className="w-4"/>

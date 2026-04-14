@@ -1,11 +1,8 @@
 import Image from "next/image";
-import { useTheme } from "next-themes";
 import { motion } from "motion/react";
 import { assets, infoList, advancedLanguage } from '../../../assets/assets';
 
 const About = () => {
-
-  const { resolvedTheme } = useTheme() as { resolvedTheme: 'dark' | 'light' };
 
   const handleProject = (title:string)=>{
     if(title === 'GitHub'){
@@ -75,16 +72,15 @@ const About = () => {
                 <motion.li 
                   whileHover={{scale:1.05}}
                   key={index} 
-                  className={`border-[0.5px] border-gray-300 rounded-xl p-6 cursor-pointer hover:-translate-y-1 duration-500 
-                    ${resolvedTheme === 'dark'?'hover:bg-[#0a2c23]':'hover:bg-white'}`}
+                  className={`border-[0.5px] border-gray-300 rounded-xl p-6 cursor-pointer hover:-translate-y-1 duration-500 `}
                   onMouseEnter={(e) => (e.currentTarget.style.boxShadow = "4px 4px 12px rgba(7, 172, 108, 0.774)")}
                   onMouseLeave={(e) => (e.currentTarget.style.boxShadow = "none")}
                   onClick={()=>handleProject(title)}
                 >
 
-                  <Image src={resolvedTheme === 'dark'?iconDark:icon} alt={title} className="w-7 mt-3"/>
-                  <h3 className={`my-4 font-semibold text-gray-700 ${resolvedTheme === 'dark'?'text-white':''}`}>{title}</h3>
-                  <p className={`text-gray-600 text-sm ${resolvedTheme === 'dark'?'text-white/80':''}`}>{description}</p>
+                  <img src='iconDark' alt={title} className="w-7 mt-3"/>
+                  <h3 className={`my-4 font-semibold text-gray-700 `}>{title}</h3>
+                  <p className={`text-gray-600 text-sm`}>{description}</p>
 
                 </motion.li>
 
@@ -96,7 +92,7 @@ const About = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 1.3 }}
-            className={`my-6 text-lg font-semibold text-gray-700 ${resolvedTheme === 'dark' ? 'text-white/80' : ''}`}>
+            className={`my-6 text-lg font-semibold text-gray-700 `}>
             Advanced Technologies
           </motion.h4>
 

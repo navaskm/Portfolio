@@ -1,23 +1,18 @@
 import Image from "next/image";
-import { useTheme } from "next-themes";
 import { assets } from '../../../assets/assets';
 import DarkLogo from "./inside/DarkLogo";
 import LightLogo from "./inside/LightLogo";
 
 const Footer = () => {
 
-  const { resolvedTheme } = useTheme() as {resolvedTheme : 'dark' | 'light'};
-
   return (
     <div className="mt-20">
 
       <div className="text-center">
-        {
-          resolvedTheme === 'dark'? <DarkLogo/>:<LightLogo/>
-        }
+          <LightLogo/>
 
         <div className="w-max flex items-center gap-2 mx-auto">
-          <Image src={resolvedTheme === 'dark' ? assets.mail_icon_dark:assets.mail_icon} alt='' className="w-6"/>
+          <Image src={ assets.mail_icon_dark} alt='' className="w-6"/>
           <a href="mailto:navaskm228@gmail.com" className="hover:underline">
             navaskm228@gmail.com
           </a>

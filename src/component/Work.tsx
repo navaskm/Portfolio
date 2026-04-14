@@ -1,13 +1,39 @@
-import Image from 'next/image';
 import { motion } from 'motion/react';
-import { assets, workData } from '../../assets/assets';
+
+const workData = [
+    {
+        title: 'Frontend Project',
+        description: 'E-commerce App with Next.js 15 and Clerk Auth',
+        bgImage: '/work-3.png',
+        link:'https://e-commerce-app-henna-nu.vercel.app'
+    },{
+        title: 'Employee Management System',
+        description: 'Role-based task management app using Next.js and Redux',
+        bgImage: '/work-4.png',
+        link:'https://employee-management-system-three-theta.vercel.app/'
+    },{
+        title: 'Portfolio Project',
+        description: 'Web Design Portfolio for Graphic Designer',
+        bgImage: '/work-1.png',
+        link:'https://anshin-ten.vercel.app'
+    },{
+        title: 'Bollinger Bands Indicator',
+        description: 'Bollinger Bands chart built with Next.js and KLineCharts',
+        bgImage: '/work-2.png',
+        link:'https://bollinger-bands-sable.vercel.app/'
+    },{
+        title: 'Smart Expense Tracker',
+        description: 'Created expense tracking app using Cursor AI.',
+        bgImage: '/work-2.png',
+        link:'https://navaskm.github.io/expence-traker/'
+    }
+]
 
 const Work = () => {
 
   const handleProject = (Link:string) => {
     window.open(Link, '_blank');
   };
-  
 
   return (
     <motion.div 
@@ -60,7 +86,7 @@ const Work = () => {
                 </div>
 
                 <div className='border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition'>
-                  <Image src={assets.send_icon} alt='' className='w-5'/>
+                  <img src="/work/send-icon.png" alt='' className='w-5'/>
                 </div>
               </div>
 
@@ -80,8 +106,8 @@ const Work = () => {
         onMouseLeave={(e) => (e.currentTarget.style.boxShadow = "none")}
       >
         Show more 
-        <Image 
-          src={assets.right_arrow_bold_dark}
+        <img 
+          src="/work/right-arrow-bold.png"
           alt=''
           className='w-4'
         />

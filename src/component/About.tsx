@@ -1,14 +1,22 @@
-import Image from "next/image";
 import { motion } from "motion/react";
-import { assets, infoList, advancedLanguage } from "../../assets/assets";
+
+const infoList = [
+    { icon: '/about/code-icon.png', title: 'Languages', description: 'HTML, CSS, JavaScript React Js, Next Js, Redux toolkit' },
+    { icon: '/about/edu-icon.png', title: 'Education', description: '+2 in Computer Commerce' },
+    { icon: '/about/project-icon.png', title: 'GitHub', description: 'Showcasing my coding work, personal projects, and development journey on GitHub.' }
+];
+
+export const advancedLanguage = [
+   'TypeScript', 'TanStack Query', 'jQuery','Tailwind', 'SCSS', 'Framer Motion', 
+];
 
 const About = () => {
 
   const handleProject = (title:string)=>{
     if(title === 'GitHub'){
       window.open("https://github.com/navaskm","_blank")
-    }
-  }
+    };
+  };
 
   return (
     <motion.div 
@@ -43,8 +51,8 @@ const About = () => {
         whileInView={{opacity:1,scale:1}}
         transition={{duration:0.6}}
         className="w-64 sm:w-80 rounded-3xl max-w-none">
-          <Image 
-            src={assets.user_image} 
+          <img 
+            src='/about/user-image.png'
             alt=''
             className="w-full rounded-3xl"
           />
@@ -66,7 +74,7 @@ const About = () => {
            className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl">
             {
               infoList.map((
-                {icon,iconDark,title,description},index
+                {icon,title,description},index
               )=>(
 
                 <motion.li 
@@ -78,7 +86,7 @@ const About = () => {
                   onClick={()=>handleProject(title)}
                 >
 
-                  <img src='iconDark' alt={title} className="w-7 mt-3"/>
+                  <img src={icon} alt={title} className="w-7 mt-3"/>
                   <h3 className={`my-4 font-semibold text-gray-700 `}>{title}</h3>
                   <p className={`text-gray-600 text-sm`}>{description}</p>
 

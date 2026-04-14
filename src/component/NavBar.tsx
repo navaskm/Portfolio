@@ -1,6 +1,4 @@
-import Image from "next/image";
-import { useRef} from "react";
-import { assets } from "../../assets/assets";
+import { useRef } from "react";
 
 const NavBar = () => {
 
@@ -19,17 +17,8 @@ const NavBar = () => {
   };
 
   return (
-    <>
-      {/* background image - now conditional based on theme */}
-      <div className="fixed top-0 right-0 w-11/12 -z-10" suppressHydrationWarning>
-        <Image 
-          src={assets.header_bg_color}
-          alt="Header background"
-          className="w-full"
-        />
-      </div>
+    <header>
 
-      {/* <InsideNavbar /> */}
       <nav className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50`}>
 
         {/* site logo */}
@@ -49,16 +38,13 @@ const NavBar = () => {
           <li><a href="#contact" className="font-Ovo">Contact me</a></li>
         </ul>
 
-        {/* moon,contact and menu button container */}
         <div className=" flex items-center gap-4">
-
-          {/* theme toggle button*/}
 
           {/* contact button */}
           <a href="#contact" className={`hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4 `}>
             Contact 
-            <Image 
-              src={assets.arrow_icon_dark}
+            <img 
+              src='/navigation/arrow-icon.png'
               alt=''
               className="w-3"
             />
@@ -69,8 +55,8 @@ const NavBar = () => {
             className="block md:hidden ml-3"
             onClick={openMenu}
           >
-            <Image 
-              src={assets.menu_white} 
+            <img 
+              src="/navigation/menu-black.png"
               alt=''
               className="w-6"
             />
@@ -86,8 +72,8 @@ const NavBar = () => {
             onClick={closeMenu}
             className="absolute right-6 top-6"
           >
-            <Image 
-              src={assets.close_white}
+            <img 
+              src="public/navigation/close-black.png"
               alt=''
               className="w-5 cursor-pointer"
             />
@@ -102,8 +88,8 @@ const NavBar = () => {
 
       </nav>
       
-    </>
-  )
-}
+    </header>
+  );
+};
 
 export default NavBar;

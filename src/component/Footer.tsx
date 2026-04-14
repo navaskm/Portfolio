@@ -1,6 +1,3 @@
-import Image from "next/image";
-import { assets } from '../../assets/assets';
-
 const Footer = () => {
 
   return (
@@ -12,7 +9,7 @@ const Footer = () => {
             </h1>
 
         <div className="w-max flex items-center gap-2 mx-auto">
-          <Image src={ assets.mail_icon_dark} alt='' className="w-6"/>
+          <img src='/footer/mail_icon.png' alt='' className="w-6"/>
           <a href="mailto:navaskm228@gmail.com" className="hover:underline">
             navaskm228@gmail.com
           </a>

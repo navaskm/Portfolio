@@ -1,6 +1,4 @@
-import Image from "next/image";
 import { motion } from "motion/react";
-import { assets } from '../../assets/assets';
 
 const Header = () => {
 
@@ -14,8 +12,8 @@ const Header = () => {
         transition={{duration: 0.6, delay:0.3}}
         className="md:mt-15"
       >
-        <Image 
-          src={assets.profile_img} 
+        <img 
+          src='/header/profile-img.png'
           alt=''
           className="rounded-full w-32"
         />
@@ -28,8 +26,8 @@ const Header = () => {
         className="flex items-end gap-2 text-xl md:text-2xl mb-3"
       >
         Hi I&apos;m Navas KM 
-        <Image 
-          src={assets.hand_icon} 
+        <img 
+          src='/header/hand-icon.png'
           alt='' 
           className="w-6"
         />
@@ -59,8 +57,8 @@ const Header = () => {
           className={`px-10 py-3 border border-white rounded-full bg-black text-white flex items-center gap-2 `}
         >
           contact me 
-          <Image 
-            src={assets.right_arrow_white} 
+          <img 
+            src='/header/right-arrow-bold.png'
             alt=''
             className="w-4"
           />
@@ -75,8 +73,8 @@ const Header = () => {
           className={`px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2`}
         >
           my resume  
-          <Image 
-            src={assets.download_icon} 
+          <img 
+            src='/header/download-icon.png'
             alt=''
             className="w-4"
           />
@@ -88,4 +86,4 @@ const Header = () => {
   )
 }
 
-export default Header 
+export default Header;

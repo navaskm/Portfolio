@@ -1,7 +1,7 @@
 import { useState } from "react";
-import Image from "next/image";
+//import Image from "next/image";
 import { motion } from "motion/react";
-import { assets } from '../../assets/assets';
+//import { assets } from '../../assets/assets';
 
 const Contact = () => {
 
@@ -116,8 +116,8 @@ const Contact = () => {
           type="submit"
           className={`py-3 px-8 w-max flex items-center justify-between gap-2 text-white rounded-full mx-auto duration-500 cursor-pointer`}
         >
-          Submit now 
-          <Image src={assets.right_arrow_white} alt='' className="w-4"/>
+          Submit now
+          <img src="/contact/right-arrow.png" alt='' className="w-4"/>
         </motion.button>
 
         <p className="mt-4">{result}</p>

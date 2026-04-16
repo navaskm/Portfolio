@@ -1,11 +1,11 @@
 const Footer = () => {
 
   return (
-    <div className="mt-20">
+    <div className="py-10 bg-[rgba(5,8,25,1)]">
 
       <div className="text-center">
           <h1 className="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600 hover:scale-105 transition-transform duration-300">
-              Navas <span className="text-black ">KM</span>
+              Navas <span className="text-white">KM</span>
             </h1>
 
         <div className="w-max flex items-center gap-2 mx-auto">
@@ -16,7 +16,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="text-center sm:flex items-center justify-between border-t border-gray-400 mx-[10%] mt-12 py-6">
+      <div className="text-center sm:flex items-center justify-between border-t border-white/20 mx-[10%] mt-12 py-6">
         <p>© 2025 Navas KM. All rights reserved.</p>
         <ul className="flex items-center gap-10 justify-center mt-4 sm:mt-0">
 

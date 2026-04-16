@@ -19,12 +19,12 @@ const NavBar = () => {
   return (
     <header>
 
-      <nav className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50`}>
+      <nav className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 bg-[rgba(11,17,54,0.85)] backdrop-blur-md border-b border-white/5`}>
 
         {/* site logo */}
         <a href="#top">
             <h1 className="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600 hover:scale-105 transition-transform duration-300">
-              Navas <span className="text-black ">KM</span>
+              Navas <span className="text-white">KM</span>
             </h1>
         </a>
 
@@ -66,7 +66,7 @@ const NavBar = () => {
 
 
         {/* ------------ mobile menu ----------- */}
-        <ul ref={sideMenuRef} className={`flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen transition duration-500`}>
+        <ul ref={sideMenuRef} className={`flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen transition duration-500 bg-[rgba(15,22,65,1)]`}>
 
           <div 
             onClick={closeMenu}

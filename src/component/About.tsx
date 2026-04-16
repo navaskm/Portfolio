@@ -24,7 +24,7 @@ const About = () => {
       whileInView={{opacity:1}}
       transition={{duration:1}}
       id="about" 
-      className="w-full px-[12%] py-10 scroll-mt-20"
+      className="w-full px-[12%] py-20 scroll-mt-20 bg-[rgba(10,16,48,1)]"
     >
 
       <motion.h4 
@@ -87,8 +87,8 @@ const About = () => {
                 >
 
                   <img src={icon} alt={title} className="w-7 mt-3"/>
-                  <h3 className={`my-4 font-semibold text-gray-700 `}>{title}</h3>
-                  <p className={`text-gray-600 text-sm`}>{description}</p>
+                  <h3 className={`my-4 font-semibold text-white `}>{title}</h3>
+                  <p className={`text-gray-300 text-sm`}>{description}</p>
 
                 </motion.li>
 
@@ -100,7 +100,7 @@ const About = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 1.3 }}
-            className={`my-6 text-lg font-semibold text-gray-700 `}>
+            className={`my-6 text-lg font-semibold text-white `}>
             Advanced Technologies
           </motion.h4>
 
@@ -114,8 +114,8 @@ const About = () => {
               <motion.li 
                 whileHover={{ scale: 1.1 }}
                 key={index} 
-                className="flex items-center justify-center min-w-[80px] px-3 py-2 border border-gray-400 dark:border-white/30 
-                          rounded-xl shadow-md cursor-pointer bg-gray-50 dark:bg-gray-800 text-gray-700 dark:text-white 
+                className="flex items-center justify-center min-w-[80px] px-3 py-2 border border-white/30 
+                          rounded-xl shadow-md cursor-pointer bg-white/10 text-white 
                           hover:shadow-lg hover:-translate-y-1 transition-transform duration-300 ease-in-out">
                 <h5 className="inline-block text-sm sm:text-base font-medium">{language}</h5>
               </motion.li>

@@ -41,7 +41,7 @@ const Work = () => {
     whileInView={{opacity:1}}
     transition={{duration:1}}
     id="work"
-    className="w-full px-[12%] py-10 scroll-mt-20">
+    className="w-full px-[12%] py-20 scroll-mt-20 bg-[rgba(6,10,32,1)]">
 
       <motion.h4 
       initial={{y:-20,opacity:0}}
@@ -101,7 +101,7 @@ const Work = () => {
         transition={{duration:0.5,delay:1.1}}
         href="https://github.com/navaskm" 
         target='_blank'
-        className={`w-max flex items-center justify-center gap-2 text-gray-700 border-[0.5px] border-gray-700 rounded-full py-3 px-10 mx-auto my-20 duration-500 `}
+        className={`w-max flex items-center justify-center gap-2 text-white border-[0.5px] border-white rounded-full py-3 px-10 mx-auto my-20 duration-500 `}
         onMouseEnter={(e) => (e.currentTarget.style.boxShadow = "4px 4px 12px rgba(7, 172, 108, 0.774)")}
         onMouseLeave={(e) => (e.currentTarget.style.boxShadow = "none")}
       >

@@ -36,7 +36,7 @@ const Contact = () => {
       whileInView={{opacity:1}}
       transition={{duration:1}}
       id="contact" 
-      className="w-full px-[12%] py-10 scroll-mt-20"
+      className="w-full px-[12%] py-20 scroll-mt-20 bg-[rgba(12,18,52,1)]"
       style={{ 
         backgroundImage: "url('/footer-bg-color.png')",
         backgroundSize: "90% auto",

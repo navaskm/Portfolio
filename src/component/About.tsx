@@ -141,7 +141,7 @@ const About = () => {
         </motion.div>
       </div>
     </motion.section>
-  )
-}
+  );
+};
 
 export default About

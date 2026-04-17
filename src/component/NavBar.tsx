@@ -25,9 +25,21 @@ const NavBar = () => {
       >
 
         {/* logo */}
-        <a href="#top" aria-label="Navas KM Nilambur Frontend Developer">
-          <p className="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600 hover:scale-105 transition-transform duration-300">
-            Navas <span className="text-white">KM</span>
+        <a href="#top" aria-label="Navas KM Nilambur Frontend Developer" className="group">
+          <p className="relative text-3xl font-extrabold tracking-wide">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500
+            transition-all duration-500 group-hover:brightness-125">
+              Navas
+            </span>
+
+            <span className="text-white ml-2 relative">
+              KM
+            </span>
+
+            <span className="absolute inset-0 text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500
+            blur-md opacity-0 group-hover:opacity-70 transition duration-500">
+              Navas
+            </span>
           </p>
         </a>
 
@@ -44,16 +56,22 @@ const NavBar = () => {
           {/* contact button */}
           <a
             href="#contact"
-            className="hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4"
+            className="hidden md:flex items-center gap-3 px-10 py-2.5 rounded-full ml-4
+            border border-white/20
+            bg-white/5
+            backdrop-blur-md
+            transition-all duration-300 ease-out
+            hover:bg-white/10 hover:border-white/40 hover:shadow-[0_0_20px_rgba(99,102,241,0.4)] group"
             title="Contact Navas KM Frontend Developer"
           >
-            Contact
+            <span className="tracking-wide">Contact</span>
+
             <Image
-              src='/navigation/arrow-icon.png'
+              src='/navigation/arrow-icon-dark.png'
               width={20}
               height={20}
               alt="arrow icon"
-              className="w-3"
+              className="w-3 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-0.5"
             />
           </a>
 
@@ -64,7 +82,7 @@ const NavBar = () => {
             aria-label="Open navigation menu"
           >
             <Image
-              src="/navigation/menu-black.png"
+              src="/navigation/menu-white.png"
               width={20}
               height={20}
               alt="enu icon"
@@ -88,7 +106,7 @@ const NavBar = () => {
             className="absolute right-6 top-6"
           >
             <Image
-              src="/navigation/close-black.png"
+              src="/navigation/close-white.png"
               width={20}
               height={20}
               alt="close menu"
@@ -104,7 +122,6 @@ const NavBar = () => {
         </ul>
 
       </nav>
-
     </header>
   );
 };

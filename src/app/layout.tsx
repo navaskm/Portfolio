@@ -1,5 +1,11 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Inter } from 'next/font/google';
+
+const inter = Inter({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
+});
 
 export const metadata: Metadata = {
   title: "Navas KM | Web Developer & Designer",
@@ -15,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className="bg-black text-white antialiased leading-8 overflow-x-hidden"
+        className={`${inter.className} bg-black text-white antialiased leading-8 overflow-x-hidden`}
       >
         {children}
       </body>

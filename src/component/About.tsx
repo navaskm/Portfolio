@@ -2,10 +2,12 @@ import { motion } from "motion/react";
 import Image from "next/image";
 
 const infoList = [
-  { icon: '/about/code-icon.png', title: 'Languages', description: 'HTML, CSS, JavaScript React Js, Next Js, Redux toolkit' },
-  { icon: '/about/edu-icon.png', title: 'Education', description: '+2 in Computer Commerce' },
-  { icon: '/about/project-icon.png', title: 'GitHub', description: 'Showcasing my coding work, personal projects, and development journey on GitHub.' },
-  { icon: '/about/project-icon.png', title: 'GitHub', description: 'Showcasing my coding work, personal projects, and development journey on GitHub.' }
+  { icon: '/about/code-icon-dark.png', alt: 'Frontend development skills including HTML, CSS, JavaScript, React and Next.js', title: 'Languages', description: 'HTML, CSS, JavaScript React Js, Next Js, Redux toolkit' },
+  { icon: '/about/edu-icon-dark.png', alt: 'Education background of Navas KM in Computer Commerce', title: 'Education', description: '+2 in Computer Commerce' },
+  { icon: '/about/project-icon-dark.png', alt: 'GitHub projects and frontend development work by Navas KM', title: 'GitHub', description: 'Showcasing my projects and development work on GitHub.' },
+  {
+    icon: '/about/experience-icon.png', alt: 'Frontend development experience of Navas KM with real projects', title: 'Experience', description: '3 months of hands-on frontend training with real projects.'
+  }
 ];
 
 export const advancedLanguage = [
@@ -55,15 +57,21 @@ const About = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}
-            className="w-64 sm:w-80 rounded-3xl max-w-none border"
+            className="w-64 sm:w-80 rounded-3xl max-w-none"
           >
-            <div className="relative w-full h-[400px]">
+            <div className="relative w-full h-[400px] overflow-hidden rounded-3xl">
+
+              {/* Image */}
               <Image
                 src="/about/user-image.png"
                 alt="Navas KM Frontend Developer from Nilambur Kerala"
                 fill
-                className="rounded-3xl object-cover"
+                className="object-cover"
               />
+
+              {/* Overlay */}
+              <div className="absolute inset-0 bg-[rgba(10,16,48,1)]/40"></div>
+
             </div>
           </motion.div>
 
@@ -85,27 +93,35 @@ const About = () => {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 1 }}
-              className="grid grid-cols-1 sm:grid-cols-4 gap-6">
+              className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {
                 infoList.map((
-                  { icon, title, description }, index
+                  { icon, title, description, alt }, index
                 ) => (
-
                   <motion.li
                     whileHover={{ scale: 1.05 }}
-                    key={index}
-                    className="border-[0.5px] border-gray-300 rounded-xl p-6 cursor-pointer hover:-translate-y-1 duration-500"
-                    onMouseEnter={(e) => (e.currentTarget.style.boxShadow = "4px 4px 12px rgba(7, 172, 108, 0.774)")}
+                    onMouseEnter={(e) => (e.currentTarget.style.boxShadow = "4px 4px 12px rgba(96,165,250,0.4)")}
                     onMouseLeave={(e) => (e.currentTarget.style.boxShadow = "none")}
+                    key={index}
+                    className="relative rounded-xl p-[1px] cursor-pointer overflow-hidden group"
                     onClick={() => handleProject(title)}
                   >
 
-                    <img src={icon} alt={title} className="w-7 mt-3" />
-                    <h3 className="my-4 font-semibold text-white">{title}</h3>
-                    <p className="text-gray-300 text-sm">{description}</p>
+                    {/* animated border layer */}
+                    <span className="absolute inset-0 rounded-xl 
+                      bg-[conic-gradient(from_0deg,#60a5fa,#a855f7,#ec4899,#60a5fa)]
+                      group-hover:bg-none
+                      animate-[spin_13s_linear_infinite]">
+                    </span>
+
+                    {/* inner card */}
+                    <div className="relative z-10 bg-[rgba(15,22,65,1)] rounded-xl p-6 h-full">
+                      <img src={icon} alt={alt} className="w-7 mt-3" />
+                      <h3 className="my-4 font-semibold text-white">{title}</h3>
+                      <p className="text-gray-300 text-sm">{description}</p>
+                    </div>
 
                   </motion.li>
-
                 ))
               }
             </motion.ul>
@@ -130,7 +146,7 @@ const About = () => {
                   key={index}
                   className="flex items-center justify-center min-w-[80px] px-3 py-2 border border-white/30 
                             rounded-xl shadow-md cursor-pointer bg-white/10 text-white 
-                            hover:shadow-lg hover:-translate-y-1 transition-transform duration-300 ease-in-out">
+                            hover:shadow-lg hover:-translate-y-1 hover:bg-black hover:border-white transition-transform duration-300 ease-in-out">
                   <h5 className="inline-block text-sm sm:text-base font-medium">{language}</h5>
                 </motion.li>
               ))}
@@ -144,4 +160,4 @@ const About = () => {
   );
 };
 
-export default About
+export default About;

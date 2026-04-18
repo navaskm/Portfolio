@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const Footer = () => {
 
   return (
@@ -10,7 +12,7 @@ const Footer = () => {
           </h3>
 
           <div className="w-max flex items-center gap-2 mx-auto">
-            <img src='/footer/mail_icon.png' alt='email icon' className="w-6" />
+            <Image width={30} height={30} src='/footer/mail_icon_dark.png' alt='email icon' className="w-6" />
             <a href="mailto:navaskm228@gmail.com" className="hover:underline" aria-label="Send email to Navas KM">
               navaskm228@gmail.com
             </a>
@@ -28,7 +30,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 aria-label="Visit Navas KM GitHub profile"
               >
-                <img src="/github.png" alt="GitHub profile" className="w-7 rounded" />
+                <Image width={30} height={30} src="/github.png" alt="GitHub profile of Navas KM" className="w-7 rounded" />
               </a>
             </li>
 
@@ -39,7 +41,7 @@ const Footer = () => {
                 aria-label="Visit Navas KM LinkedIn profile"
                 rel="noopener noreferrer"
               >
-                <img src="/linkedin.png" alt="LinkedIn profile" className="w-7 rounded" />
+                <Image width={30} height={30} src="/linkedin.png" alt="LinkedIn profile of Navas KM" className="w-7 rounded" />
               </a>
             </li>
 
@@ -50,7 +52,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 aria-label="Chat with Navas KM on WhatsApp"
               >
-                <img src="/whatsapp.png" alt="WhatsApp chat" className="w-7 rounded" />
+                <Image width={30} height={30} src="/whatsapp.png" alt="WhatsApp chat with Navas KM" className="w-7 rounded" />
               </a>
             </li>
 

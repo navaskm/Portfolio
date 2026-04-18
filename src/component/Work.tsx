@@ -43,7 +43,7 @@ const Work = () => {
       transition={{ duration: 1 }}
       id="work"
       aria-labelledby="Work's of Navas KM Nilambur Frontend Developer"
-      className="w-full py-20 scroll-mt-20 bg-[rgba(6,10,32,1)]"
+      className="w-full pt-20 pb-1 scroll-mt-20 bg-[rgba(6,10,32,1)]"
     >
 
       <div className='max-w-[1500px] mx-auto px-5 lg:px-8'>
@@ -71,7 +71,7 @@ const Work = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.9 }}
-          className={`grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] my-10 gap-5 `}>
+          className={`grid grid-cols-[repeat(auto-fit,minmax(100px,1fr))] my-10 gap-5 `}>
           {
             workData.map((project, index) => (
               <motion.article
@@ -79,25 +79,48 @@ const Work = () => {
                 transition={{ duration: 0.3 }}
                 key={index}
                 style={{ backgroundImage: `url(${project.bgImage})` }}
-                className='aspect-square bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group'
+                className='aspect-square bg-no-repeat bg-cover bg-center rounded-xl relative cursor-pointer group overflow-hidden'
                 onClick={() => handleProject(project.link)}
               >
 
                 {/* Hidden SEO Image */}
-                <img
+                <Image
+                  height={30}
+                  width={30}
                   src={project.bgImage}
                   alt={`${project.title} project by Navas KM`}
                   className="hidden"
                 />
 
-                <div className='bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7'>
-                  <div>
-                    <h2 className='font-semibold text-black'>{project.title}</h2>
-                    <p className='text-sm text-gray-700'>{project.description}</p>
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-[rgba(10,16,48,1)]/60 group-hover:bg-[rgba(10,16,48,1)]/70 transition duration-300"></div>
+
+                {/* Content */}
+                <div className='absolute inset-0 z-10 p-4 flex flex-col justify-end'>
+
+                  {/* text */}
+                  <div className="max-w-full">
+                    <h2 className='font-semibold text-white text-sm sm:text-base truncate'>
+                      {project.title}
+                    </h2>
+
+                    <p className='text-xs sm:text-sm text-gray-300 group-hover:text-white line-clamp-2'>
+                      {project.description}
+                    </p>
                   </div>
 
-                  <div className='border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition'>
-                    <img src="/work/send-icon.png" alt={`${project.title} project by Navas KM`} className='w-5' />
+                  {/* button */}
+                  <div className='mt-3 flex justify-end'>
+                    <div className='rounded-full w-9 aspect-square flex items-center justify-center 
+                      transition-all duration-300 bg-white/40 group-hover:bg-white'>
+                      <Image
+                        height={30}
+                        width={30}
+                        src="/work/send-icon.png"
+                        alt={`${project.title} project by Navas KM`}
+                        className='w-4'
+                      />
+                    </div>
                   </div>
                 </div>
 
@@ -115,12 +138,12 @@ const Work = () => {
           rel="noopener noreferrer"
           aria-label="Visit Navas KM GitHub profile"
           className="w-max flex items-center justify-center gap-2 text-white border-[0.5px] border-white rounded-full py-3 px-10 mx-auto my-20 duration-500"
-          onMouseEnter={(e) => (e.currentTarget.style.boxShadow = "4px 4px 12px rgba(7, 172, 108, 0.774)")}
+          onMouseEnter={(e) => (e.currentTarget.style.boxShadow = "4px 4px 12px rgba(96,165,250,0.4)")}
           onMouseLeave={(e) => (e.currentTarget.style.boxShadow = "none")}
         >
           Show more
           <img
-            src="/work/right-arrow-bold.png"
+            src="/work/right-arrow-bold-dark.png"
             alt='arrow icon'
             className='w-4'
           />

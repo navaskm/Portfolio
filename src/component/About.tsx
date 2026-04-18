@@ -50,7 +50,7 @@ const About = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
-          className="flex w-full flex-col lg:flex-row items-center lg:items-start gap-20 mt-20"
+          className="flex w-full flex-col lg:flex-row items-center lg:items-start gap-10 lg:gap-20 mt-5 lg:mt-20"
         >
 
           <motion.div
@@ -59,7 +59,7 @@ const About = () => {
             transition={{ duration: 0.6 }}
             className="w-64 sm:w-80 rounded-3xl max-w-none"
           >
-            <div className="relative w-full h-[400px] overflow-hidden rounded-3xl">
+            <div className="relative w-full h-[300px] md:h-[400px] overflow-hidden rounded-3xl">
 
               {/* Image */}
               <Image

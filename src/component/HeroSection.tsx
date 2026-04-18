@@ -69,7 +69,7 @@ const HeroSection = () => {
           <motion.a
             initial={{ y: 30, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.6, delay: 1 }}
+            transition={{ duration: 0.6, delay: 1, ease: "easeOut" }}
             href="#contact"
             aria-label="Contact Navas KM"
             className="group px-6 py-2 md:px-10 md:py-3 rounded-full 
@@ -91,7 +91,7 @@ const HeroSection = () => {
           <motion.a
             initial={{ y: 30, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.6, delay: 1.2 }}
+            transition={{ duration: 0.6, delay: 1.2, ease: "easeOut" }}
             href="/Navas-KM-Frontend-Developer-Resume.pdf"
             download
             aria-label="Download Navas KM resume"

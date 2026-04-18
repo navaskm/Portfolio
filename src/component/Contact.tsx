@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion } from "motion/react";
+import Image from "next/image";
 
 const Contact = () => {
 
@@ -29,11 +30,12 @@ const Contact = () => {
   };
 
   return (
-    <motion.div
+    <motion.section
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
       id="contact"
+      aria-labelledby="Contact from Navas KM Nilambur Frontend Developer"
       className="w-full px-[12%] py-20 scroll-mt-20 bg-[rgba(12,18,52,1)]"
     >
 
@@ -42,7 +44,7 @@ const Contact = () => {
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.3 }}
         className="text-center mb-2 text-lg"
-      >connect with me</motion.h4>
+      >Contact Navas KM</motion.h4>
 
       <motion.h2
         initial={{ y: -20, opacity: 0 }}
@@ -66,6 +68,7 @@ const Contact = () => {
         transition={{ duration: 0.5, delay: 0.9 }}
         onSubmit={onSubmit}
         className="max-w-2xl mx-auto"
+        aria-label="Contact form for Navas KM"
       >
 
         <div className="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-6 mt-10 mb-8">
@@ -77,8 +80,9 @@ const Contact = () => {
             type="text"
             placeholder="Enter your name"
             name="name"
+            aria-label="Send your name in to Navas KM"
             required
-            className={`flex-1 p-3 outline-none border-[0.5px] rounded-mb bg-black border-white/90 `}
+            className="flex-1 p-3 outline-none border-[0.5px] rounded-mb bg-black border-white/90"
           />
 
           <motion.input
@@ -89,8 +93,8 @@ const Contact = () => {
             placeholder="Enter your email"
             name="email"
             required
-            className={`flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-mb 
-              bg-black `}
+            className="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-mb bg-black"
+            aria-label="Send email address in to Navas KM"
           />
 
         </div>
@@ -103,24 +107,28 @@ const Contact = () => {
           placeholder="Enter your message"
           required
           name="message"
-          className={`w-full p-4 outline-none border-[0.5px] border-gray-400 rounded-md mb-6`}
+          className="w-full p-4 outline-none border-[0.5px] border-gray-400 rounded-md mb-6"
+          aria-label="Your message in to Navas KM"
         ></motion.textarea>
 
         <motion.button
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.3 }}
+          onMouseEnter={(e) => (e.currentTarget.style.boxShadow = "4px 4px 12px rgba(96,165,250,0.4)")}
+          onMouseLeave={(e) => (e.currentTarget.style.boxShadow = "none")}
           type="submit"
           className="py-3 px-8 w-max flex items-center justify-between gap-2 text-white rounded-full mx-auto duration-500 cursor-pointer bg-black"
+          aria-label="Send message to Navas KM"
         >
-          Submit now
-          <img src="/contact/right-arrow.png" alt='' className="w-4" />
+          Send Message
+          <Image width={30} height={30} src="/contact/right-arrow-white.png" alt='arrow icon' className="w-4" />
         </motion.button>
 
         <p className="mt-4">{result}</p>
 
       </motion.form>
 
-    </motion.div>
+    </motion.section>
   )
 }
 

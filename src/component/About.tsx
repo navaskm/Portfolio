@@ -2,9 +2,18 @@ import { motion } from "motion/react";
 import Image from "next/image";
 
 const infoList = [
-  { icon: '/about/code-icon-dark.png', alt: 'Frontend development skills including HTML, CSS, JavaScript, React and Next.js', title: 'Languages', description: 'HTML, CSS, JavaScript React Js, Next Js, Redux toolkit' },
-  { icon: '/about/edu-icon-dark.png', alt: 'Education background of Navas KM in Computer Commerce', title: 'Education', description: '+2 in Computer Commerce' },
-  { icon: '/about/project-icon-dark.png', alt: 'GitHub projects and frontend development work by Navas KM', title: 'GitHub', description: 'Showcasing my projects and development work on GitHub.' },
+  {
+    icon: '/about/code-icon-dark.png', alt: 'Frontend development skills including HTML, CSS, JavaScript, React and Next.js', title: 'Languages', description: 'HTML, CSS, JavaScript React Js, Next Js, Redux toolkit'
+  },
+  {
+    icon: '/about/edu-icon-dark.png', alt: 'Education background of Navas KM in Computer Commerce', title: 'Education', description: '+2 in Computer Commerce'
+  },
+  {
+    icon: '/about/project-icon-dark.png',
+    alt: 'Self-taught frontend developer with two years of continuous learning experience',
+    title: 'Self Learning',
+    description: '2+ years of continuous self-learning in frontend development.'
+  },
   {
     icon: '/about/experience-icon.png', alt: 'Frontend development experience of Navas KM with real projects', title: 'Experience', description: '3 months of hands-on frontend training with real projects.'
   }
@@ -15,12 +24,6 @@ export const advancedLanguage = [
 ];
 
 const About = () => {
-
-  const handleProject = (title: string) => {
-    if (title === 'GitHub') {
-      window.open("https://github.com/navaskm", "_blank")
-    };
-  };
 
   return (
     <motion.section
@@ -104,7 +107,6 @@ const About = () => {
                     onMouseLeave={(e) => (e.currentTarget.style.boxShadow = "none")}
                     key={index}
                     className="relative rounded-xl p-[1px] cursor-pointer overflow-hidden group"
-                    onClick={() => handleProject(title)}
                   >
 
                     {/* animated border layer */}

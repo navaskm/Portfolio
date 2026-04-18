@@ -19,7 +19,42 @@
   border-radius: 10px;
 }
 
-/* HERO SECTION ANIMATION */
+/* HERO SECTION HAND ICON ANIMATION */
+.wave-hand {
+  display: inline-block;
+  animation: waveMove 2.5s ease-in-out infinite;
+  transform-origin: 70% 70%;
+}
+
+@keyframes waveMove {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  20% {
+    transform: rotate(18deg);
+    /* more right */
+  }
+
+  40% {
+    transform: rotate(-10deg);
+  }
+
+  60% {
+    transform: rotate(20deg);
+    /* more right */
+  }
+
+  80% {
+    transform: rotate(-6deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* HERO SECTION TEXT ANIMATION */
 .shine-text {
   display: inline-block;
   font-weight: bold;

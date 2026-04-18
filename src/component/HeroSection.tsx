@@ -5,7 +5,7 @@ const HeroSection = () => {
 
   return (
     <section className="w-full bg-[rgba(15,22,65,1)] mt-16 md:mt-18 lg:mt-22" aria-label="Introduction about Navas KM">
-      <div className="w-11/12 max-w-4xl text-center mx-auto min-h-[calc(100vh-800px)] flex flex-col items-center justify-center gap-4 py-10">
+      <div className="w-11/12 max-w-5xl text-center mx-auto min-h-[calc(100vh-800px)] flex flex-col items-center justify-center gap-4 py-10">
 
         {/* my profile photo */}
         <motion.div
@@ -31,13 +31,15 @@ const HeroSection = () => {
         >
           Hi I&apos;m
           <span className="text-white font-semibold">Navas KM</span>
-          <Image
-            src='/header/hand-icon.png'
-            width={20}
-            height={20}
-            alt='Navas KM Nilambur Frontend Developer'
-            className="w-5 animate-pulse"
-          />
+          <span className="wave-hand inline-block">
+            <Image
+              src='/header/hand-icon.png'
+              width={20}
+              height={20}
+              alt='Navas KM Nilambur Frontend Developer'
+              className="w-5"
+            />
+          </span>
         </motion.h1>
 
         <motion.h2
@@ -47,11 +49,11 @@ const HeroSection = () => {
           className="text-3xl sm:text-5xl lg:text-[64px] font-bold leading-tight"
         >
           <span className="shine-text">
-            Frontend Developer
-          </span>{" "}
+            Self-Taught
+          </span>
 
-          <span className="text-white/80">based in</span>
-          <span className="text-white"> Nilambur, Kerala, India</span>
+          <span className="text-white"> Frontend Developer</span>
+          <span className="text-white/80"> based in Nilambur, Kerala</span>
         </motion.h2>
 
         <motion.p

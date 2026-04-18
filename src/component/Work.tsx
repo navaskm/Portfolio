@@ -10,7 +10,8 @@ const workData = [
   }, {
     title: 'Employee Management System',
     description: 'Role-based task management app using Next.js and Redux',
-    bgImage: '/work/emplyee-managment.avif'
+    bgImage: '/work/emplyee-managment.avif',
+    link: 'https://employee-management-system-three-theta.vercel.app/'
   }, {
     title: 'Portfolio Project',
     description: 'Web Design Portfolio for Graphic Designer',

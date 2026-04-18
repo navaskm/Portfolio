@@ -3,31 +3,38 @@ import Image from 'next/image';
 
 const workData = [
   {
-    title: 'Frontend Project',
+    title: 'E-commerce App',
     description: 'E-commerce App with Next.js 15 and Clerk Auth',
-    bgImage: '/work-3.png',
+    bgImage: '/work/e-commerce.avif',
     link: 'https://e-commerce-app-henna-nu.vercel.app'
   }, {
     title: 'Employee Management System',
     description: 'Role-based task management app using Next.js and Redux',
-    bgImage: '/work-4.png',
-    link: 'https://employee-management-system-three-theta.vercel.app/'
+    bgImage: '/work/emplyee-managment.avif'
   }, {
     title: 'Portfolio Project',
     description: 'Web Design Portfolio for Graphic Designer',
-    bgImage: '/work-1.png',
+    bgImage: '/work/portfolio.avif',
     link: 'https://anshin-ten.vercel.app'
-  }, {
-    title: 'Bollinger Bands Indicator',
-    description: 'Bollinger Bands chart built with Next.js and KLineCharts',
-    bgImage: '/work-2.png',
-    link: 'https://bollinger-bands-sable.vercel.app/'
-  }, {
+  },
+  {
     title: 'Smart Expense Tracker',
     description: 'Created expense tracking app using Cursor AI.',
-    bgImage: '/work-2.png',
+    bgImage: '/work/expense-tracker.avif',
     link: 'https://navaskm.github.io/expence-traker/'
-  }
+  },
+  {
+    title: 'Finance dashboard',
+    description: "Interactive financial dashboard built with modern UI to visualize data, track performance, and display insights using responsive design and clean user interfaces.",
+    bgImage: '/work/finance-dashboard.png',
+    link: 'https://finance-dashboard-ui-ochre-nu.vercel.app/'
+  },
+  {
+    title: 'Product Management',
+    description: 'Product management system with features to add, edit, delete, and search products, along with toggle views between table and grid layouts for better user experience.',
+    bgImage: '/work/product-mange.jpg',
+    link: 'https://product-management-roan-beta.vercel.app/'
+  },
 ]
 
 const Work = () => {

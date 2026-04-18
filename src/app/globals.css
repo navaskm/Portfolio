@@ -83,3 +83,24 @@
     background-position: 200% center;
   }
 }
+
+/* FUTURE PLANE SECTION ICON ANIMATION */
+.float-icon {
+  display: inline-flex;
+  animation: floatIcon 2.5s ease-in-out infinite;
+  will-change: transform;
+}
+
+@keyframes floatIcon {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}

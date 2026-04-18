@@ -48,6 +48,7 @@ const NavBar = () => {
           <li><a href="#top" className="font-Ovo" title="Go to Home section">Home</a></li>
           <li><a href="#about" className="font-Ovo" title="About Navas KM Frontend Developer">About me</a></li>
           <li><a href="#work" title="View projects by Navas KM">My Work</a></li>
+          <li><a href="#future-plan" title="View future plans of Navas KM">Future Plans</a></li>
           <li><a href="#contact" className="font-Ovo" title="Contact Navas KM Frontend Developer">Contact me</a></li>
         </ul>
 

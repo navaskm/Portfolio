@@ -30,7 +30,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 aria-label="Visit Navas KM GitHub profile"
               >
-                <Image width={30} height={30} src="/github.png" alt="GitHub profile of Navas KM" className="w-7 rounded" />
+                <Image width={30} height={30} src="/footer/github.png" alt="GitHub profile of Navas KM" className="w-7 rounded" />
               </a>
             </li>
 
@@ -41,7 +41,7 @@ const Footer = () => {
                 aria-label="Visit Navas KM LinkedIn profile"
                 rel="noopener noreferrer"
               >
-                <Image width={30} height={30} src="/linkedin.png" alt="LinkedIn profile of Navas KM" className="w-7 rounded" />
+                <Image width={30} height={30} src="/footer/linkedin.png" alt="LinkedIn profile of Navas KM" className="w-7 rounded" />
               </a>
             </li>
 
@@ -52,7 +52,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 aria-label="Chat with Navas KM on WhatsApp"
               >
-                <Image width={30} height={30} src="/whatsapp.png" alt="WhatsApp chat with Navas KM" className="w-7 rounded" />
+                <Image width={30} height={30} src="/footer/whatsapp.png" alt="WhatsApp chat with Navas KM" className="w-7 rounded" />
               </a>
             </li>
 

@@ -8,8 +8,25 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Navas KM | Web Developer & Designer",
-  description: "I am a passionate web developer specializing in modern front-end and back-end technologies. Explore my projects, skills, and experience in building scalable and user-friendly applications.",
+  title: "Navas KM | Frontend Developer in Nilambur, Kerala",
+  description: "Portfolio of Navas KM, a self-taught frontend developer from Nilambur, Kerala, India. Specializing in React, Next.js, and Tailwind CSS to build modern and responsive web applications.",
+  keywords: [
+    "Navas KM",
+    "Navas KM Nilambur",
+    "Frontend Developer Nilambur",
+    "Frontend Developer Malappuram",
+    "Frontend Developer Kerala",
+    "React Developer Nilambur",
+    "React Developer Malappuram",
+    "React Developer Kerala",
+    "N.extjs Developer Nilambur",
+    "Next.js Developer Malappuram",
+    "Next.js Developer Kerala",
+    "Self Taught Developer Nilambur",
+    "Self Taught Developer Malappuram",
+    "Self Taught Developer Kerala",
+    "Frontend Developer Portfolio"
+  ],
 };
 
 export default function RootLayout({

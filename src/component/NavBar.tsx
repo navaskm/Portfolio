@@ -1,20 +1,17 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import Image from "next/image";
 
 const NavBar = () => {
 
   const sideMenuRef = useRef<HTMLUListElement>(null);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const openMenu = () => {
-    if (sideMenuRef.current) {
-      sideMenuRef.current.style.transform = 'translateX(-16rem)';
-    };
+    setIsMenuOpen(true);
   };
 
   const closeMenu = () => {
-    if (sideMenuRef.current) {
-      sideMenuRef.current.style.transform = 'translateX(16rem)';
-    };
+    setIsMenuOpen(false);
   };
 
   return (
@@ -95,31 +92,38 @@ const NavBar = () => {
 
 
         {/* ------------ mobile menu ----------- */}
-        <ul
-          ref={sideMenuRef}
-          className="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen transition duration-500 bg-[rgba(15,22,65,1)]"
-          aria-label="Mobile Navigation"
-        >
-
-          <span
-            onClick={closeMenu}
-            className="absolute right-6 top-6"
+        <div className="fixed inset-0 pointer-events-none">
+          
+          {isMenuOpen && (
+            <button
+              onClick={closeMenu}
+              className="pointer-events-auto absolute right-6 top-6 z-50"
+              aria-label="Close menu"
+            >
+              <Image
+                src="/navigation/close-white.png"
+                width={20}
+                height={20}
+                alt="close menu"
+                className="w-5 cursor-pointer"
+              />
+            </button>
+          )} 
+          
+          <ul
+            ref={sideMenuRef}
+            className={`pointer-events-auto flex md:hidden flex-col gap-4 pt-20 pb-5 px-10 fixed top-0 right-0 w-64 z-40 h-auto bg-[#0c1866] rounded-bl-2xl
+            transform transition-transform duration-500
+            ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}
+            aria-label="Mobile Navigation"
           >
-            <Image
-              src="/navigation/close-white.png"
-              width={20}
-              height={20}
-              alt="close menu"
-              className="w-5 cursor-pointer"
-            />
-          </span>
-
-          <li><a href="#top" title="Go to Home section" onClick={closeMenu}>Home</a></li>
-          <li><a href="#about" title="About Navas KM Frontend Developer" onClick={closeMenu}>About me</a></li>
-          <li><a href="#work" title="View projects by Navas KM" onClick={closeMenu}>My Work</a></li>
-          <li><a href="#contact" title="Contact Navas KM Frontend Developer" onClick={closeMenu}>Contact me</a></li>
-
-        </ul>
+            <li><a href="#top" title="Go to Home section" onClick={closeMenu}>Home</a></li>
+            <li><a href="#about" title="About Navas KM Frontend Developer" onClick={closeMenu}>About me</a></li>
+            <li><a href="#work" title="View projects by Navas KM" onClick={closeMenu}>My Work</a></li>
+            <li><a href="#future-plan" title="View future plans of Navas KM" onClick={closeMenu}>Future Plans</a></li>
+            <li><a href="#contact" title="Contact Navas KM Frontend Developer" onClick={closeMenu}>Contact me</a></li>
+          </ul> 
+        </div>
 
       </nav>
     </header>

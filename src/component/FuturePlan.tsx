@@ -42,23 +42,23 @@ const FuturePlan = () => {
       className="w-full py-20 scroll-mt-20 bg-[rgba(10,16,48,1)] text-white"
     >
       <div className="max-w-[1500px] mx-auto px-5 lg:px-8">
-        <motion.h4
+        <motion.h2
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
           className="text-center mb-2 text-lg text-gray-300"
         >
           My Journey
-        </motion.h4>
+        </motion.h2>
 
-        <motion.h2
+        <motion.h3
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.5 }}
           className="text-center text-4xl lg:text-5xl mb-16"
         >
           Future Plans
-        </motion.h2>
+        </motion.h3>
 
         <div className="relative">
 

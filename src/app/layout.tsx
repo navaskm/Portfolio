@@ -37,6 +37,9 @@ export default function RootLayout({
 
   return (
     <html lang="en" className="scroll-smooth">
+      <head>
+        <meta name="google-site-verification" content="nXPPNlMbXUiWh_fTeSeHHFINl_tP-h7dSRWC4Qptwg8" />
+      </head>
       <body
         className={`${inter.className} bg-black text-white antialiased leading-8 overflow-x-hidden`}
       >

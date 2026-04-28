@@ -149,7 +149,7 @@ const About = () => {
                   className="flex items-center justify-center min-w-[80px] px-3 py-2 border border-white/30 
                             rounded-xl shadow-md cursor-pointer bg-white/10 text-white 
                             hover:shadow-lg hover:-translate-y-1 hover:bg-black hover:border-white transition-transform duration-300 ease-in-out">
-                  <h5 className="inline-block text-sm sm:text-base font-medium">{language}</h5>
+                  <span className="text-sm sm:text-base font-medium">{language}</span>
                 </motion.li>
               ))}
             </motion.ul>

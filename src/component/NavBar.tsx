@@ -101,7 +101,7 @@ const NavBar = () => {
           aria-label="Mobile Navigation"
         >
 
-          <div
+          <button
             onClick={closeMenu}
             className="absolute right-6 top-6"
           >
@@ -112,7 +112,7 @@ const NavBar = () => {
               alt="close menu"
               className="w-5 cursor-pointer"
             />
-          </div>
+          </button>
 
           <li><a href="#top" title="Go to Home section" onClick={closeMenu}>Home</a></li>
           <li><a href="#about" title="About Navas KM Frontend Developer" onClick={closeMenu}>About me</a></li>

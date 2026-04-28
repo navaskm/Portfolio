@@ -35,19 +35,19 @@ const About = () => {
       aria-labelledby="About Navas KM Nilambur Frontend Developer"
     >
       <div className="max-w-[1500px] mx-auto px-5 lg:px-8">
-        <motion.h4
+        <motion.h2
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
           className="text-center mb-2 text-lg"
-        >Introduction</motion.h4>
+        >Introduction</motion.h2>
 
-        <motion.h2
+        <motion.h3
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.5 }}
           className="text-center text-5xl"
-        >About me</motion.h2>
+        >About me</motion.h3>
 
         <motion.div
           initial={{ opacity: 0 }}

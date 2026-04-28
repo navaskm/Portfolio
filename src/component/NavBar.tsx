@@ -98,7 +98,6 @@ const NavBar = () => {
         <ul
           ref={sideMenuRef}
           className="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen transition duration-500 bg-[rgba(15,22,65,1)]"
-          role="menu"
           aria-label="Mobile Navigation"
         >
 
